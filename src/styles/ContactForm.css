@@ -226,10 +226,16 @@
 @media (max-width: 480px) {
   .contact-section {
     padding: var(--spacing-lg);
+    margin: 0;
   }
   
   .contact-heading {
     font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .contact-form {
+    gap: var(--spacing-md);
   }
   
   .contact-form input,
@@ -240,6 +246,7 @@
   }
   
   .contact-form textarea {
+    min-height: 100px;
     padding-top: var(--spacing-sm);
   }
   

@@ -94,10 +94,10 @@ function Home() {
                     rel="noopener noreferrer"
                     title="LinkedIn"
                   >
-                    <i className="fa fa-linkedin"></i>
+                    <i className="fa fa-linkedin-square"></i>
                   </a>
-                  <a href="mailto:utkarshdalmia28@gmail.com" title="Email">
-                    <i className="fa fa-envelope"></i>
+                  <a href="mailto:utkarshdalmia28@gmail.com" title="Gmail">
+                    <i className="fa fa-google"></i>
                   </a>
                 </div>
               </div>

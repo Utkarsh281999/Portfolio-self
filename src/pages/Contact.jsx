@@ -4,27 +4,48 @@ import "../styles/Contact.css";
 export default function Contact() {
   return (
     <section className="contact" id="contact">
-      <h1 className="section-title">Contact Me</h1>
+      <h1 className="section-title">Get In Touch</h1>
 
       <p className="section-subtitle">
         Based in <strong>Passau, Germany</strong>. Always open to discussing new
         opportunities, collaborations, or simply chatting about technology and innovation.
       </p>
-      <div className="contact-details">
+      
+      <div className="contact-info">
         <div className="contact-item">
-          <i className="fa fa-phone"></i>
-          <a href="tel:+4915164415426">+49 151 64415426</a>
+          <div className="contact-icon">
+            <i className="fa fa-phone"></i>
+          </div>
+          <div className="contact-details">
+            <h3>Phone</h3>
+            <p><a href="tel:+4915164415426">+49 151 64415426</a></p>
+          </div>
         </div>
 
         <div className="contact-item">
-          <i className="fa fa-envelope-o"></i>
-          <a href="mailto:utkarshdalmia28@gmail.com">utkarshdalmia28@gmail.com</a>
+          <div className="contact-icon">
+            <i className="fa fa-envelope"></i>
+          </div>
+          <div className="contact-details">
+            <h3>Email</h3>
+            <p><a href="mailto:utkarshdalmia28@gmail.com">utkarshdalmia28@gmail.com</a></p>
+          </div>
         </div>
 
         <div className="contact-item">
-          <i className="fa fa-map-marker"></i>
-          <span>Passau, Germany</span>
+          <div className="contact-icon">
+            <i className="fa fa-map-marker"></i>
+          </div>
+          <div className="contact-details">
+            <h3>Location</h3>
+            <p><span>Passau, Germany</span></p>
+          </div>
         </div>
+      </div>
+
+      <div className="availability">
+        <strong>Professional Status:</strong> Available for full-time positions, 
+        consulting engagements, and collaborative projects.
       </div>
 
       <div className="social-links">
@@ -42,17 +63,12 @@ export default function Contact() {
           rel="noreferrer"
           title="LinkedIn Profile"
         >
-          <i className="fa fa-linkedin"></i>
+          <i className="fa fa-linkedin-square"></i>
         </a>
-        <a href="mailto:utkarshdalmia28@gmail.com" title="Send Email">
-          <i className="fa fa-envelope-o"></i>
+        <a href="mailto:utkarshdalmia28@gmail.com" title="Send Gmail">
+          <i className="fa fa-google"></i>
         </a>
       </div>
-
-      <p className="availability">
-        <strong>Professional Status:</strong> Available for full-time positions, 
-        consulting engagements, and collaborative projects.
-      </p>
     </section>
   );
 }

@@ -27,7 +27,7 @@ export default function About() {
 
             <p>
               Currently pursuing a Master's degree in Computer Science at{" "}
-              <strong>Universität Passau, Germany</strong>, I maintain expertise
+              <strong> Universität Passau, Germany</strong>, I maintain expertise
               in modern web technologies, cloud infrastructure, and cybersecurity.
             </p>
 
