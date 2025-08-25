@@ -20,34 +20,33 @@ export default function About() {
 
           <div className="para">
             <p>
-              Hi, I'm <strong>Utkarsh Dalmia</strong>, a passionate developer
-              with 3+ years of experience building innovative software solutions
-              that enhance business productivity.
+              I am <strong>Utkarsh Dalmia</strong>, a dedicated software engineer
+              with over 3 years of professional experience developing enterprise-grade
+              solutions that drive measurable business outcomes.
             </p>
 
             <p>
-              Currently pursuing my Master's in Computer Science at{" "}
-              <strong>Universität Passau, Germany</strong>, I have a strong
-              foundation in web development, cloud computing, and security.
+              Currently pursuing a Master's degree in Computer Science at{" "}
+              <strong>Universität Passau, Germany</strong>, I maintain expertise
+              in modern web technologies, cloud infrastructure, and cybersecurity.
             </p>
 
             <p>
-              Skilled in <strong>full-stack development</strong>, DevOps, and
-              cloud technologies including AWS, Jenkins, and database management,
-              I aim to deliver efficient and scalable applications.
+              My technical proficiency spans <strong>full-stack development</strong>,
+              DevOps automation, and cloud platforms including AWS. I specialize in
+              architecting scalable systems and implementing CI/CD pipelines that
+              optimize development velocity and product reliability.
             </p>
 
             <p>
-              I love exploring new technologies and leveraging them to solve
-              real-world problems—whether it's building web applications,
-              managing cloud infrastructure, or developing innovative solutions.
+              I am committed to staying at the forefront of technological innovation,
+              consistently applying emerging technologies to solve complex business
+              challenges across web applications, cloud infrastructure, and system
+              architecture domains.
             </p>
           </div>
         </div>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+
         {/* RIGHT COLUMN: CONTACT FORM */}
         <div className="about-right">
           <ContactForm />

@@ -1,70 +1,99 @@
-/* Contact Section */
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  background: linear-gradient(180deg, #111827, #1f2937); /* match contact bg */
-  font-family: 'Inter', sans-serif;
-  color: #e5e7eb;
-}
+/* ==============================
+   Professional Contact Section
+============================== */
+
 .contact {
   width: 100%;
-  background: linear-gradient(180deg, #111827, #1f2937); /* calm dark gradient */
-  padding: 6rem 2rem 4rem;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
 }
 
-/* Headings */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.contact > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==============================
+   Section Title
+============================== */
 .section-title {
   text-align: center;
-  color: #26a1da;
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 3rem;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  color: var(--text-light);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, #ffffff, #e2e8f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   position: relative;
 }
+
 .section-title::after {
   content: "";
   display: block;
   width: 80px;
-  height: 3px;
-  background: #26a1da;
-  margin: 0.5rem auto 0;
+  height: 4px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  margin: 1rem auto 0;
   border-radius: 2px;
 }
 
 .section-subtitle {
-  color: #d1d5db; /* soft gray text */
-  font-size: 1.15rem;
-  max-width: 720px;
-  margin: 0 auto 3.2rem auto;
-  line-height: 1.75;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto var(--spacing-3xl);
+  line-height: 1.6;
 }
 
-/* Contact Info */
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  margin-bottom: 3.2rem;
+/* ==============================
+   Contact Information
+============================== */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-3xl);
+  max-width: 800px;
+  width: 100%;
 }
 
 .contact-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.9rem;
-  font-size: 1.1rem;
-  color: #e5e7eb;
+  gap: var(--spacing-lg);
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(20px);
   animation: fadeUp 0.8s ease forwards;
 }
 
@@ -72,53 +101,229 @@ html, body {
 .contact-item:nth-child(2) { animation-delay: 0.4s; }
 .contact-item:nth-child(3) { animation-delay: 0.6s; }
 
-.contact-item i {
-  color: #26a1da;
-  font-size: 1.3rem;
+.contact-item:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.contact-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  flex-shrink: 0;
+}
+
+.contact-details h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-light);
+}
+
+.contact-details p {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
 }
 
 .contact-item a {
-  color: #e5e7eb;
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  border-bottom: 1px solid transparent;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .contact-item a:hover {
-  color: #26a1da;
-  border-bottom: 1px solid #26a1da;
+  color: #6366f1;
+  text-decoration: underline;
 }
 
-/* Social Links */
+.contact-item span {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* ==============================
+   Availability Status
+============================== */
+.availability {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: var(--text-light);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-3xl);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+  position: relative;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+.availability::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+.availability strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ==============================
+   Social Links
+============================== */
 .social-links {
-  margin: 2.5rem 0;
   display: flex;
   justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
 }
 
 .social-links a {
-  margin: 0 1.2rem;
-  font-size: 2.1rem;
-  color: #d1d5db;
-  transition: color 0.3s ease, transform 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.social-links a:hover::before {
+  opacity: 1;
 }
 
 .social-links a:hover {
-  color: #26a1da;
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.4);
+  color: var(--text-light);
+  text-decoration: none;
 }
 
-/* Availability */
-.availability {
-  color: #9ca3af; /* muted gray */
-  font-size: 1rem;
-  margin-top: 2.5rem;
+.social-links a i {
+  position: relative;
+  z-index: 1;
 }
 
-/* Subtle fade-in */
+/* ==============================
+   Animation Keyframes
+============================== */
 @keyframes fadeUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ==============================
+   Responsive Design
+============================== */
+@media (max-width: 1024px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-3xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .contact-item {
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+
+  .social-links a {
+    width: 55px;
+    height: 55px;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .section-subtitle {
+    font-size: 1.125rem;
+    padding: 0 var(--spacing-sm);
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+
+  .availability {
+    font-size: 1rem;
+    padding: var(--spacing-md);
+  }
+
+  .social-links a {
+    width: 50px;
+    height: 50px;
+    font-size: 1.125rem;
+  }
+}
+
+/* ==============================
+   Dark Mode Support
+============================== */
+@media (prefers-color-scheme: dark) {
+  .contact {
+    background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
   }
 }

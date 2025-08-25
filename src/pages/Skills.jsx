@@ -80,12 +80,12 @@ const skillCategories = [
 ];
 
 const professionalSkills = [
-  "🌐 Networking",
-  "💼 Business Development",
-  "📊 IT Management",
-  "🔧 IT Support",
-  "📈 Marketing & Sales",
-  "🌍 Multilingual (English, German)",
+  "Network Architecture & Administration",
+  "Strategic Business Development",
+  "IT Infrastructure Management",
+  "Technical Support & Troubleshooting", 
+  "Digital Marketing & Sales Strategy",
+  "Cross-Cultural Communication (English, German)",
 ];
 
 export default function Skills() {
@@ -143,7 +143,9 @@ export default function Skills() {
           className="bottom__to__top"
           ref={scrollTopBtnRef}
           aria-label="Scroll to top"
-        ></a>
+        >
+          <i className="fa fa-arrow-up"></i>
+        </a>
       </div>
     </div>
   );

@@ -7,10 +7,9 @@ export default function Contact() {
       <h1 className="section-title">Contact Me</h1>
 
       <p className="section-subtitle">
-        Based in <strong>Passau, Germany</strong>. <br></br>Always open to discussing new
+        Based in <strong>Passau, Germany</strong>. Always open to discussing new
         opportunities, collaborations, or simply chatting about technology and innovation.
       </p>
-        <br></br>
       <div className="contact-details">
         <div className="contact-item">
           <i className="fa fa-phone"></i>
@@ -51,8 +50,8 @@ export default function Contact() {
       </div>
 
       <p className="availability">
-        <strong>Currently:</strong> Open to full-time opportunities, internships,
-        and freelance projects.
+        <strong>Professional Status:</strong> Available for full-time positions, 
+        consulting engagements, and collaborative projects.
       </p>
     </section>
   );

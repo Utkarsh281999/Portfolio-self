@@ -52,16 +52,16 @@ function Home() {
           <div className="container">
             <div className="home__content">
               <div className="home__meta">
-                <h2 className="home__text">Hi there! 👋</h2>
+                <h2 className="home__text">Welcome</h2>
                 <h1 className="home__text">I'm Utkarsh Dalmia</h1>
                 <h3 className="home__text sweet">
-                  Full-Stack Developer &amp; DevOps Engineer
+                  Full-Stack Developer &amp; Cloud Engineer
                 </h3>
                 <p className="home__description">
-                  Masters student in Computer Science at Universität Passau,
-                  with 3+ years of experience in Web Development, DevOps, and
-                  Cloud Technologies. Passionate about creating innovative
-                  solutions that drive business productivity.
+                  Computer Science Master's student at Universität Passau with 3+ years 
+                  of professional experience in full-stack development, DevOps practices, 
+                  and cloud architecture. Specialized in building scalable applications 
+                  and optimizing development workflows to enhance business efficiency.
                 </p>
 
                 {/* Buttons */}

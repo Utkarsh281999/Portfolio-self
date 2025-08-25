@@ -1,161 +1,298 @@
-/* ========================
-   GOOGLE FONT IMPORT
-======================== */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+/* ==============================
+   Professional About Section
+============================== */
 
-/* ========================
-   ABOUT SECTION BACKGROUND
-======================== */
 .about-bg {
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
-  width: 100%;
-  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding: var(--spacing-3xl) 0;
   position: relative;
-  font-family: 'Roboto', sans-serif;
   overflow: hidden;
 }
 
-/* ========================
-   SECTION TITLE
-======================== */
+.about-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.03) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.about-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==============================
+   Section Header
+============================== */
 .about-bg h1 {
   text-align: center;
-  color: #26a1da;
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 3rem;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  color: var(--text-primary);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-3xl);
   position: relative;
 }
 
-/* Add underline effect */
 .about-bg h1::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  background: #26a1da;
-  margin: 0.5rem auto 0;
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
   border-radius: 2px;
 }
 
-/* ========================
-   LAYOUT
-======================== */
-.about-section {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 3rem;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-/* ========================
-   LEFT COLUMN (Profile + Bio)
-======================== */
-.about-left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  animation: fadeInLeft 1s ease forwards;
-}
-
-.profile-img img {
-  width: 280px;
-  max-width: 100%;
-  border: 5px solid #1c1c1c;
-  border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
-}
-
-.profile-img img:hover {
-  transform: scale(1.08) rotate(1deg);
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
-  filter: brightness(1.1);
-}
-
+/* ==============================
+   Content Layout
+============================== */
 .para {
-  max-width: 600px;
-  margin-top: 2rem;
-  padding: 0 0.5rem;
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.para::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+}
+
+.para:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .para p {
-  color: #f5f5f5;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   line-height: 1.8;
-  margin-bottom: 1.6rem;
-  text-align: justify;
-  letter-spacing: 0.3px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
 }
 
-.para p::first-letter {
-  font-size: 1.4rem;
+.para p:last-child {
+  margin-bottom: 0;
+}
+
+.para p strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ==============================
+   Statistics Section
+============================== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.stat-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.stat-card:hover::before {
+  left: 100%;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ==============================
+   Profile Section
+============================== */
+.profile-highlight {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--text-light);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  margin: var(--spacing-2xl) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.profile-highlight:hover::before {
+  opacity: 1;
+}
+
+.profile-highlight h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #26a1da;
+  margin-bottom: var(--spacing-md);
+  color: inherit;
 }
 
-/* ========================
-   RIGHT COLUMN (Contact Form)
-======================== */
-.about-right {
-  flex: 1;
-  animation: fadeInRight 1s ease forwards;
+.profile-highlight p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
 }
 
-/* ========================
-   ANIMATIONS
-======================== */
-@keyframes fadeInLeft {
-  0% { opacity: 0; transform: translateX(-40px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes fadeInRight {
-  0% { opacity: 0; transform: translateX(40px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
-
-/* ========================
-   RESPONSIVE DESIGN
-======================== */
-@media (max-width: 992px) {
-  .about-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2rem;
+/* ==============================
+   Responsive Design
+============================== */
+@media (max-width: 1024px) {
+  .about-bg {
+    padding: var(--spacing-2xl) 0;
   }
 
-  .about-left, .about-right {
-    animation: none;
+  .para {
+    padding: var(--spacing-lg);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   }
 }
 
 @media (max-width: 768px) {
-  .profile-img img {
-    width: 220px;
-    margin-bottom: 1.5rem;
+  .about-bg h1 {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .para {
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
   }
 
   .para p {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .stat-card {
+    padding: var(--spacing-md);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .profile-highlight {
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
   }
 }
 
 @media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+  }
+}
+
+/* ==============================
+   Dark Mode Support
+============================== */
+@media (prefers-color-scheme: dark) {
   .about-bg {
-    padding: 2.5rem 1rem;
+    background: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+  }
+
+  .about-bg h1 {
+    color: var(--text-light);
+  }
+
+  .para {
+    background: var(--neutral-800);
+    border-color: var(--neutral-700);
   }
 
   .para p {
-    font-size: 0.9rem;
+    color: var(--neutral-300);
+  }
+
+  .para p strong {
+    color: var(--text-light);
+  }
+
+  .stat-card {
+    background: var(--neutral-800);
+    border-color: var(--neutral-700);
   }
 }
