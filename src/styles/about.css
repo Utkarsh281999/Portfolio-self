@@ -1,0 +1,161 @@
+/* ========================
+   GOOGLE FONT IMPORT
+======================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ========================
+   ABOUT SECTION BACKGROUND
+======================== */
+.about-bg {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  width: 100%;
+  padding: 4rem 1rem;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+/* ========================
+   SECTION TITLE
+======================== */
+.about-bg h1 {
+  text-align: center;
+  color: #26a1da;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+/* Add underline effect */
+.about-bg h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #26a1da;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ========================
+   LAYOUT
+======================== */
+.about-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* ========================
+   LEFT COLUMN (Profile + Bio)
+======================== */
+.about-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.profile-img img {
+  width: 280px;
+  max-width: 100%;
+  border: 5px solid #1c1c1c;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+}
+
+.profile-img img:hover {
+  transform: scale(1.08) rotate(1deg);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+  filter: brightness(1.1);
+}
+
+.para {
+  max-width: 600px;
+  margin-top: 2rem;
+  padding: 0 0.5rem;
+}
+
+.para p {
+  color: #f5f5f5;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  text-align: justify;
+  letter-spacing: 0.3px;
+}
+
+.para p::first-letter {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #26a1da;
+}
+
+/* ========================
+   RIGHT COLUMN (Contact Form)
+======================== */
+.about-right {
+  flex: 1;
+  animation: fadeInRight 1s ease forwards;
+}
+
+/* ========================
+   ANIMATIONS
+======================== */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+======================== */
+@media (max-width: 992px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .about-left, .about-right {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-img img {
+    width: 220px;
+    margin-bottom: 1.5rem;
+  }
+
+  .para p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-bg {
+    padding: 2.5rem 1rem;
+  }
+
+  .para p {
+    font-size: 0.9rem;
+  }
+}

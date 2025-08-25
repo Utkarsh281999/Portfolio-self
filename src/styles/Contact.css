@@ -1,0 +1,124 @@
+/* Contact Section */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: linear-gradient(180deg, #111827, #1f2937); /* match contact bg */
+  font-family: 'Inter', sans-serif;
+  color: #e5e7eb;
+}
+.contact {
+  width: 100%;
+  background: linear-gradient(180deg, #111827, #1f2937); /* calm dark gradient */
+  padding: 6rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+/* Headings */
+.section-title {
+  text-align: center;
+  color: #26a1da;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #26a1da;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: #d1d5db; /* soft gray text */
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 3.2rem auto;
+  line-height: 1.75;
+}
+
+/* Contact Info */
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 1.1rem;
+  color: #e5e7eb;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.contact-item:nth-child(1) { animation-delay: 0.2s; }
+.contact-item:nth-child(2) { animation-delay: 0.4s; }
+.contact-item:nth-child(3) { animation-delay: 0.6s; }
+
+.contact-item i {
+  color: #26a1da;
+  font-size: 1.3rem;
+}
+
+.contact-item a {
+  color: #e5e7eb;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #26a1da;
+  border-bottom: 1px solid #26a1da;
+}
+
+/* Social Links */
+.social-links {
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 0 1.2rem;
+  font-size: 2.1rem;
+  color: #d1d5db;
+  transition: color 0.3s ease, transform 0.25s ease;
+}
+
+.social-links a:hover {
+  color: #26a1da;
+  transform: translateY(-4px);
+}
+
+/* Availability */
+.availability {
+  color: #9ca3af; /* muted gray */
+  font-size: 1rem;
+  margin-top: 2.5rem;
+}
+
+/* Subtle fade-in */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

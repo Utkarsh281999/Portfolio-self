@@ -1,0 +1,210 @@
+:root {
+  --primary-color: #4a90e2; /* calm blue for highlights */
+  --accent-color: #f06292; /* soft pink accent */
+  --bg-dark: #121212; /* professional dark background */
+  --card-bg: #1e1e1e; /* dark gray cards */
+  --card-hover: #2a2a2a; /* hover effect */
+  --text-light: #e0e0e0; /* readable light text */
+  --text-muted: #a0a0a0; /* muted secondary text */
+  --hover-accent: rgba(240, 98, 146, 0.15); /* subtle accent hover */
+  --transition-fast: 0.3s ease;
+  --font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  font-family: var(--font-family);
+  color: var(--text-light);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.about {
+  background-color: var(--card-bg);
+  padding: 3% 2%;
+  font-family: var(--font-family);
+  color: var(--text-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.about__heading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+button.about.btn.pointer {
+  width: 180px;
+  height: 50px;
+  font-size: 15px;
+  border-radius: 6px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+button.about.btn.pointer:hover,
+button.about.btn.pointer:focus {
+  background-color: #357ab8;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* ✅ Skills Section */
+.skills-section {
+  padding: 4% 2%;
+}
+
+.tagline h1 {
+  text-align: center;
+  color: #26a1da;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+/* Add underline effect */
+.tagline h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #26a1da;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+
+.tech-stack {
+  width: 95%;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tech-stack h2 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0;
+  color: var(--text-muted);
+}
+
+.icon-name {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  width: 160px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.icon-name:hover {
+  background: var(--card-hover);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3), 0 0 10px var(--hover-accent);
+}
+
+.icon-name p {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.skill-item span {
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: var(--text-light);
+  background: var(--card-bg);
+  border: 1px solid #2e2e2e;
+  transition: all var(--transition-fast);
+}
+
+.skill-item span:hover {
+  background: var(--hover-accent);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+a.bottom__to__top {
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+a.bottom__to__top.active {
+  display: flex;
+}
+
+/* 📱 Responsive */
+@media (max-width: 784px) {
+  .tech-stack {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon-name {
+    width: 150px;
+  }
+  .icon-name p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  button.about.btn.pointer {
+    width: 160px;
+    height: 45px;
+    font-size: 14px;
+  }
+  .icon-name {
+    width: 130px;
+  }
+  .icon-name p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 325px) {
+  .icon-name {
+    width: 110px;
+  }
+  .icon-name p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 225px) {
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
