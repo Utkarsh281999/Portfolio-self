@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="contact-info">
         <div className="contact-item">
           <div className="contact-icon">
-            <i className="fa fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
           </div>
           <div className="contact-details">
             <h3>Phone</h3>
@@ -24,7 +24,7 @@ export default function Contact() {
 
         <div className="contact-item">
           <div className="contact-icon">
-            <i className="fa fa-envelope"></i>
+            <i className="fa-regular fa-envelope"></i>
           </div>
           <div className="contact-details">
             <h3>Email</h3>
@@ -34,7 +34,7 @@ export default function Contact() {
 
         <div className="contact-item">
           <div className="contact-icon">
-            <i className="fa fa-map-marker"></i>
+            <i className="fa-solid fa-location-dot"></i>
           </div>
           <div className="contact-details">
             <h3>Location</h3>
@@ -55,7 +55,7 @@ export default function Contact() {
           rel="noreferrer"
           title="GitHub Profile"
         >
-          <i className="fa fa-github"></i>
+          <i className="fa-brands fa-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/utkarsh-dalmia-039578192/"
@@ -63,10 +63,21 @@ export default function Contact() {
           rel="noreferrer"
           title="LinkedIn Profile"
         >
-          <i className="fa fa-linkedin-square"></i>
+          <i className="fa-brands fa-linkedin"></i>
         </a>
-        <a href="mailto:utkarshdalmia28@gmail.com" title="Send Gmail">
-          <i className="fa fa-google"></i>
+        <a
+          href="mailto:utkarshdalmia28@gmail.com"
+          title="Send Email"
+        >
+          <i className="fa-regular fa-envelope"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/slayin_uttu?igsh=MXhzMjR6ZG80eGVvZw=="
+          target="_blank"
+          rel="noreferrer"
+          title="Instagram Profile"
+        >
+          <i className="fa-brands fa-instagram"></i>
         </a>
       </div>
     </section>

@@ -46,7 +46,8 @@ export default function About() {
             </p>
           </div>
         </div>
-
+        <div><br></br></div>
+        <div><br></br></div>
         {/* RIGHT COLUMN: CONTACT FORM */}
         <div className="about-right">
           <ContactForm />

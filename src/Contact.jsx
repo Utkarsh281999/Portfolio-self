@@ -28,27 +28,39 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="social-links">
-        <a
-          href="https://github.com/Udalmia"
-          target="_blank"
-          rel="noreferrer"
-          title="GitHub Profile"
-        >
-          <i className="fa fa-github"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/utkarsh-dalmia-039578192/"
-          target="_blank"
-          rel="noreferrer"
-          title="LinkedIn Profile"
-        >
-          <i className="fa fa-linkedin"></i>
-        </a>
-        <a href="mailto:utkarshdalmia28@gmail.com" title="Send Email">
-          <i className="fa fa-envelope-o"></i>
-        </a>
-      </div>
+     <div className="social-links">
+  <a
+    href="https://github.com/Udalmia"
+    target="_blank"
+    rel="noreferrer"
+    title="GitHub Profile"
+  >
+    <i className="fa fa-github"></i>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/utkarsh-dalmia-039578192/"
+    target="_blank"
+    rel="noreferrer"
+    title="LinkedIn Profile"
+  >
+    <i className="fa fa-linkedin"></i>
+  </a>
+  <a
+    href="mailto:utkarshdalmia28@gmail.com"
+    title="Send Email"
+  >
+    <i className="fa fa-envelope-o"></i>
+  </a>
+  <a
+    href="https://www.instagram.com/YOUR_USERNAME/"
+    target="_blank"
+    rel="noreferrer"
+    title="Instagram Profile"
+  >
+    <i className="fa fa-instagram"></i>
+  </a>
+</div>
+
 
       <p className="availability">
         <strong>Currently:</strong> Open to full-time opportunities, internships,

@@ -279,6 +279,7 @@
 
 .about-right {
   flex: 1;
+  padding-top: 160px;
 }
 
 .profile-img {
