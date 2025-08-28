@@ -80,28 +80,26 @@ function Home() {
 
                 {/* Social Links */}
                 <div className="quick-links">
-  <a
-    href="https://github.com/Udalmia"
-    target="_blank"
-    rel="noopener noreferrer"
-    title="GitHub"
-  >
-    <i className="fab fa-github"></i>
-  </a>
-  <a
-    href="https://www.linkedin.com/in/utkarsh-dalmia-039578192/"
-    target="_blank"
-    rel="noopener noreferrer"
-    title="LinkedIn"
-  >
-    <i className="fab fa-linkedin"></i>
-  </a>
-  <a href="mailto:utkarshdalmia28@gmail.com" title="Gmail">
-    <i className="fab fa-google"></i>
-  </a>
-</div>
-
-
+                  <a
+                    href="https://github.com/Udalmia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="GitHub"
+                  >
+                    <i className="fa fa-github"></i>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/utkarsh-dalmia-039578192/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="LinkedIn"
+                  >
+                    <i className="fa fa-linkedin-square"></i>
+                  </a>
+                  <a href="mailto:utkarshdalmia28@gmail.com" title="Gmail">
+                    <i className="fa fa-google"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
