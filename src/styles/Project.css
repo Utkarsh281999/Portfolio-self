@@ -85,6 +85,8 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
+  animation: projectFadeIn 0.8s ease forwards;
+  opacity: 0;
 }
 
 .project-card::before {
@@ -158,55 +160,54 @@
 }
 
 /* ==============================
-   Project Details
-============================== */
-.project-details {
-  margin-bottom: var(--spacing-lg);
-}
-
-.project-details p {
-  margin-bottom: var(--spacing-sm);
-  font-size: 1rem;
-}
-
-/* ==============================
    Project Links/Buttons
 ============================== */
 .project-links {
   display: flex;
+  gap: 12px;
+  margin-top: 10px;
   flex-wrap: wrap;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
 }
 
-.project-links a {
+.project-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid transparent;
 }
 
-.project-links button {
+/* Demo button */
+.demo-btn {
   background: linear-gradient(135deg, #0ea5e9, #2563eb);
-  border: none;
-  border-radius: var(--radius-md);
-  padding: 0.75rem 1.5rem;
-  color: var(--text-light);
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.project-links button:hover {
+.demo-btn:hover {
   background: linear-gradient(135deg, #0284c7, #1d4ed8);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
 }
 
+/* GitHub button */
+.github-btn {
+  background-color: #24292e;
+  color: white;
+}
+.github-btn:hover {
+  background-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
 /* ==============================
-   Project Notes/Tags
+   Project Notes
 ============================== */
 .project-note {
   display: inline-block;
@@ -222,78 +223,7 @@
 }
 
 /* ==============================
-   Responsive Design
-============================== */
-@media (max-width: 1330px) {
-  .project-section {
-    padding: 0 var(--spacing-md);
-  }
-  
-  .center {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--spacing-xl);
-  }
-}
-
-@media (max-width: 900px) {
-  .center {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-  }
-  
-  .project-card img {
-    height: 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects {
-    padding: var(--spacing-2xl) 0;
-  }
-  
-  .project-content {
-    padding: var(--spacing-lg);
-  }
-  
-  .project-card h2 {
-    font-size: 1.5rem;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .center {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-  
-  .project-card {
-    margin: 0 var(--spacing-sm);
-  }
-  
-  .project-content {
-    padding: var(--spacing-md);
-  }
-  
-  .project-card h2 {
-    font-size: 1.25rem;
-  }
-  
-  .project-card p {
-    font-size: 0.9rem;
-  }
-  
-  .project-links button {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
-  }
-}
-
-/* ==============================
-   Animation Effects
+   Animation
 ============================== */
 @keyframes projectFadeIn {
   from {
@@ -306,64 +236,56 @@
   }
 }
 
-.project-card {
-  animation: projectFadeIn 0.8s ease forwards;
-  opacity: 0;
-}
-
 .project-card:nth-child(1) { animation-delay: 0.1s; }
 .project-card:nth-child(2) { animation-delay: 0.2s; }
 .project-card:nth-child(3) { animation-delay: 0.3s; }
 .project-card:nth-child(4) { animation-delay: 0.4s; }
 .project-card:nth-child(5) { animation-delay: 0.5s; }
 
-@media (prefers-reduced-motion: reduce) {
-  .project-card {
-    animation: none;
-    opacity: 1;
-  }
-}
-
 /* ==============================
-   Dark Mode Support
+   Responsive Design
 ============================== */
-@media (prefers-color-scheme: dark) {
-  .projects {
-    background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
+@media (max-width: 1330px) {
+  .center {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   }
 }
 
-.project-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
+@media (max-width: 900px) {
+  .center {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card img {
+    height: 220px;
+  }
 }
 
-.project-btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
+@media (max-width: 768px) {
+  .projects {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .project-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+  }
 }
 
-/* Demo button */
-.demo-btn {
-  background-color: #0070f3;
-  color: white;
-}
-.demo-btn:hover {
-  background-color: #005bb5;
-}
-
-/* GitHub button */
-.github-btn {
-  background-color: #24292e;
-  color: white;
-}
-.github-btn:hover {
-  background-color: #000;
+@media (max-width: 480px) {
+  .project-card h2 {
+    font-size: 1.25rem;
+  }
+  
+  .project-card p {
+    font-size: 0.9rem;
+  }
+  
+  .project-btn {
+    padding: 8px 14px;
+    font-size: 0.875rem;
+  }
 }
