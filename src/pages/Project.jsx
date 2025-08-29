@@ -111,16 +111,19 @@ export default function Projects() {
               {project.links && (
                 <div className="project-links">
                   {project.links.map((link, i) => (
-                    <button
+                    <a
                       key={i}
-                      type="button"
-                      onClick={() =>
-                        window.open(link.url, "_blank", "noopener,noreferrer")
-                      }
-                      aria-label={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`project-btn ${
+                        link.label.toLowerCase().includes("github")
+                          ? "github-btn"
+                          : "demo-btn"
+                      }`}
                     >
                       {link.label}
-                    </button>
+                    </a>
                   ))}
                 </div>
               )}
