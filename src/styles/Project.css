@@ -1,175 +1,4 @@
 /* ==============================
-   Professional Projects Section
-============================== */
-
-.projects {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  width: 100%;
-  padding: var(--spacing-3xl) 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.projects::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
-  z-index: 1;
-}
-
-.projects > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* ==============================
-   Section Title
-============================== */
-.projects h1 {
-  text-align: center;
-  color: var(--text-light);
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--spacing-3xl);
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-.projects h1::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
-  margin: 1rem auto 0;
-  border-radius: 2px;
-}
-
-/* ==============================
-   Project Container
-============================== */
-.project-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
-}
-
-/* ==============================
-   Grid Layout for Projects
-============================== */
-.center {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: var(--spacing-2xl);
-  padding: var(--spacing-lg) 0;
-}
-
-/* ==============================
-   Project Cards
-============================== */
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(14, 165, 233, 0.1));
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  border-radius: var(--radius-xl);
-}
-
-.project-card:hover::before {
-  opacity: 1;
-}
-
-.project-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 
-    0 30px 60px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(14, 165, 233, 0.3);
-  border-color: rgba(14, 165, 233, 0.3);
-}
-
-/* ==============================
-   Project Images
-============================== */
-.project-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.project-card:hover img {
-  transform: scale(1.05);
-}
-
-/* ==============================
-   Project Content
-============================== */
-.project-content {
-  padding: var(--spacing-xl);
-}
-
-.project-card h2 {
-  color: var(--text-light);
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: var(--spacing-md);
-  background: linear-gradient(135deg, #ffffff, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.project-card p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.125rem;
-  line-height: 1.7;
-  margin-bottom: var(--spacing-lg);
-}
-
-.project-card strong {
-  color: #0ea5e9;
-  font-weight: 600;
-}
-
-/* ==============================
-   Project Details
-============================== */
-.project-details {
-  margin-bottom: var(--spacing-lg);
-}
-
-.project-details p {
-  margin-bottom: var(--spacing-sm);
-  font-size: 1rem;
-}
-
-/* ==============================
    Project Links/Buttons
 ============================== */
 .project-links {
@@ -179,191 +8,39 @@
   margin-top: var(--spacing-lg);
 }
 
-.project-links a {
-  text-decoration: none;
-}
-
-.project-links button {
-  background: linear-gradient(135deg, #0ea5e9, #2563eb);
-  border: none;
-  border-radius: var(--radius-md);
+.project-btn {
+  display: inline-block;
   padding: 0.75rem 1.5rem;
-  color: var(--text-light);
+  border-radius: var(--radius-md);
+  text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project-links button:hover {
+/* Demo button */
+.demo-btn {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.demo-btn:hover {
   background: linear-gradient(135deg, #0284c7, #1d4ed8);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
 }
 
-/* ==============================
-   Project Notes/Tags
-============================== */
-.project-note {
-  display: inline-block;
-  background: rgba(14, 165, 233, 0.2);
-  color: #0ea5e9;
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-lg);
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin: 0.25rem 0.5rem 0.25rem 0;
-  border: 1px solid rgba(14, 165, 233, 0.3);
-  backdrop-filter: blur(10px);
-}
-
-/* ==============================
-   Responsive Design
-============================== */
-@media (max-width: 1330px) {
-  .project-section {
-    padding: 0 var(--spacing-md);
-  }
-  
-  .center {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: var(--spacing-xl);
-  }
-}
-
-@media (max-width: 900px) {
-  .center {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-xl);
-  }
-  
-  .project-card img {
-    height: 220px;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects {
-    padding: var(--spacing-2xl) 0;
-  }
-  
-  .project-content {
-    padding: var(--spacing-lg);
-  }
-  
-  .project-card h2 {
-    font-size: 1.5rem;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .center {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-  
-  .project-card {
-    margin: 0 var(--spacing-sm);
-  }
-  
-  .project-content {
-    padding: var(--spacing-md);
-  }
-  
-  .project-card h2 {
-    font-size: 1.25rem;
-  }
-  
-  .project-card p {
-    font-size: 0.9rem;
-  }
-  
-  .project-links button {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
-  }
-}
-
-/* ==============================
-   Animation Effects
-============================== */
-@keyframes projectFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.project-card {
-  animation: projectFadeIn 0.8s ease forwards;
-  opacity: 0;
-}
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.2s; }
-.project-card:nth-child(3) { animation-delay: 0.3s; }
-.project-card:nth-child(4) { animation-delay: 0.4s; }
-.project-card:nth-child(5) { animation-delay: 0.5s; }
-
-@media (prefers-reduced-motion: reduce) {
-  .project-card {
-    animation: none;
-    opacity: 1;
-  }
-}
-
-/* ==============================
-   Dark Mode Support
-============================== */
-@media (prefers-color-scheme: dark) {
-  .projects {
-    background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
-  }
-}
-
-.project-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.project-btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-}
-
-/* Demo button */
-.demo-btn {
-  background-color: #0070f3;
-  color: white;
-}
-.demo-btn:hover {
-  background-color: #005bb5;
-}
-
 /* GitHub button */
 .github-btn {
   background-color: #24292e;
-  color: white;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .github-btn:hover {
   background-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
