@@ -20,8 +20,8 @@ export default function Projects() {
         { label: "Responsibilities", value: "Authentication, Navigation, Inventory, Payment Gateway" },
       ],
       links: [
-        { label: "Live Demo", url: "https://plura-sight-project.vercel.app/", type: "demo" },
-        { label: "GitHub", url: "https://github.com/Udalmia/PluraSight_Project/tree/master/main", type: "github" },
+        { label: "Live Demo", url: "https://plura-sight-project.vercel.app/" },
+        { label: "GitHub", url: "https://github.com/Udalmia/PluraSight_Project/tree/master/main" },
       ],
     },
     {
@@ -34,8 +34,8 @@ export default function Projects() {
         { label: "Responsibilities", value: "UI/UX design, State Management, API Integration" },
       ],
       links: [
-        { label: "Live Demo", url: "https://dunzo-clone.vercel.app/", type: "demo" },
-        { label: "GitHub", url: "https://github.com/Udalmia/Dunzo_Clone", type: "github" },
+        { label: "Live Demo", url: "https://dunzo-clone.vercel.app/" },
+        { label: "GitHub", url: "https://github.com/Udalmia/Dunzo_Clone" },
       ],
     },
     {
@@ -48,8 +48,8 @@ export default function Projects() {
         { label: "Responsibilities", value: "Frontend development, REST API integration, Authentication" },
       ],
       links: [
-        { label: "Live Demo", url: "https://interntheory-clone.vercel.app/", type: "demo" },
-        { label: "GitHub", url: "https://github.com/Udalmia/InternTheory_Clone", type: "github" },
+        { label: "Live Demo", url: "https://interntheory-clone.vercel.app/" },
+        { label: "GitHub", url: "https://github.com/Udalmia/InternTheory_Clone" },
       ],
     },
     {
@@ -62,7 +62,7 @@ export default function Projects() {
         { label: "Responsibilities", value: "Navigation, Inventory, Favourite Food, Calcaluation of food, Planner " },
       ],
       links: [
-        { label: "GitHub", url: "https://github.com/Utkarsh281999/dashboard-zoo-cologne-challenge", type: "github" },
+        { label: "GitHub", url: "https://github.com/Utkarsh281999/dashboard-zoo-cologne-challenge" },
       ],
     },
     {
@@ -79,7 +79,7 @@ export default function Projects() {
         { label: "Output", value: "Video / Projection-based performance or installation" },
       ],
       links: [
-        { label: "GitHub", url: "https://github.com/Udalmia/Mandala_Experience", type: "github" },
+        { label: "GitHub", url: "https://github.com/Udalmia/Mandala_Experience" },
       ],
     },
   ];
@@ -106,17 +106,13 @@ export default function Projects() {
                 </p>
               ))}
 
+              {project.note && <div className="project-note">{project.note}</div>}
+
               {project.links && (
                 <div className="project-links">
                   {project.links.map((link, i) => (
-                    <a
-                      key={i}
-                      href={link.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={`project-btn ${link.type === "github" ? "github-btn" : "demo-btn"}`}
-                    >
-                      {link.label}
+                    <a key={i} href={link.url} target="_blank" rel="noreferrer">
+                      <button>{link.label}</button>
                     </a>
                   ))}
                 </div>
