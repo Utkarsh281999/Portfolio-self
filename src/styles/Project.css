@@ -332,3 +332,38 @@
     background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #1e293b 100%);
   }
 }
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Demo button */
+.demo-btn {
+  background-color: #0070f3;
+  color: white;
+}
+.demo-btn:hover {
+  background-color: #005bb5;
+}
+
+/* GitHub button */
+.github-btn {
+  background-color: #24292e;
+  color: white;
+}
+.github-btn:hover {
+  background-color: #000;
+}

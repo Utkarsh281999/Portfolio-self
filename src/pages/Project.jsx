@@ -111,8 +111,14 @@ export default function Projects() {
               {project.links && (
                 <div className="project-links">
                   {project.links.map((link, i) => (
-                    <a key={i} href={link.url} target="_blank" rel="noreferrer">
-                      <button>{link.label}</button>
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`project-btn ${link.label === "GitHub" ? "github-btn" : "demo-btn"}`}
+                    >
+                      {link.label}
                     </a>
                   ))}
                 </div>
