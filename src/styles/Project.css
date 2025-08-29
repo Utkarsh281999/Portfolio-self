@@ -101,6 +101,9 @@
   transition: opacity 0.4s ease;
   border-radius: var(--radius-xl);
 }
+/* Make the hover overlay non-interactive so clicks pass through */
+.project-card::before { pointer-events: none; }
+
 
 .project-card:hover::before {
   opacity: 1;
