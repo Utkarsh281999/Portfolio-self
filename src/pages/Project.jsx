@@ -79,7 +79,7 @@ export default function Projects() {
         { label: "Output", value: "Video / Projection-based performance or installation" },
       ],
       links: [
-        { label: "GitHub", url: "https://github.com/Udalmia/Mandala_Experience" },
+        { label: "GitHub", url: "https://github.com/nehaberu/MusicViz" },
       ],
     },
   ];
