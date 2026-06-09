@@ -82,6 +82,20 @@ export default function Projects() {
         { label: "GitHub", url: "https://github.com/nehaberu/MusicViz" },
       ],
     },
+     {
+      title: "Pluralsight Clone",
+      img: PluralsightImg,
+      description:
+        "A comprehensive learning platform clone that focuses on providing on-demand courses and upgrading skills for users.",
+      details: [
+        { label: "Tech Stack", value: "HTML | CSS | JavaScript | APIs" },
+        { label: "Responsibilities", value: "Authentication, Navigation, Inventory, Payment Gateway" },
+      ],
+      links: [
+        { label: "Live Demo", url: "https://plura-sight-project.vercel.app/" },
+        { label: "GitHub", url: "https://github.com/Udalmia/PluraSight_Project/tree/master/main" },
+      ],
+    },
   ];
 
   return (
