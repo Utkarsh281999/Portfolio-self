@@ -87,10 +87,10 @@ export default function Projects() {
       title: "GeoExplorer",
       img: GeoExplorerImg,
       description:
-        "A comprehensive learning platform clone that focuses on providing on-demand courses and upgrading skills for users.",
+        "An immersive VR-based geographic exploration platform that visualizes global CO₂ emissions, GDP per capita, and other country-specific data through interactive 3D globe navigation.",
       details: [
-        { label: "Tech Stack", value: "HTML | CSS | JavaScript | APIs" },
-        { label: "Responsibilities", value: "Authentication, Navigation, Inventory, Payment Gateway" },
+        { label: "Tech Stack", value: "Unity | C# | OpenXR | XR Interaction Toolkit | REST APIs" },
+        { label: "Responsibilities", value: "VR Interaction Design, Globe Rendering, Country Data Visualization, API Integration, UI/UX Development" },
       ],
       links: [
         { label: "GitHub", url: "https://github.com/Utkarsh281999/Geoexplorer#" },
