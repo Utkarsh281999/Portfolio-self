@@ -84,7 +84,7 @@ export default function Projects() {
       ],
     },
      {
-      title: "GeoExplorer"
+      title: "GeoExplorer",
       img: GeoExplorerImg,
       description:
         "A comprehensive learning platform clone that focuses on providing on-demand courses and upgrading skills for users.",
