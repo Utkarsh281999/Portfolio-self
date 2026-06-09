@@ -83,8 +83,8 @@ export default function Projects() {
       ],
     },
      {
-      title: "Pluralsight Clone",
-      img: PluralsightImg,
+      title: "GeoExplorer"
+      img: GeoExplorerImg,
       description:
         "A comprehensive learning platform clone that focuses on providing on-demand courses and upgrading skills for users.",
       details: [
@@ -92,8 +92,7 @@ export default function Projects() {
         { label: "Responsibilities", value: "Authentication, Navigation, Inventory, Payment Gateway" },
       ],
       links: [
-        { label: "Live Demo", url: "https://plura-sight-project.vercel.app/" },
-        { label: "GitHub", url: "https://github.com/Udalmia/PluraSight_Project/tree/master/main" },
+        { label: "GitHub", url: "https://github.com/Utkarsh281999/Geoexplorer#" },
       ],
     },
   ];
