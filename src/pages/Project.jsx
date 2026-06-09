@@ -7,6 +7,7 @@ import DunzoImg from "../img/Dunzo.jpg";
 import InterntheoryImg from "../img/intern.png";
 import MandalaImg from "../img/Mandala.png"; 
 import CologneImg from "../img/Cologne.png";
+import GeoExplorerImg from "../img/GeoExplorer.png";
 
 export default function Projects() {
   const projectData = [
